@@ -2,6 +2,8 @@ package jp.yokomark.fit.sample;
 
 import android.app.Application;
 
+import jp.yokomark.fit.Fit;
+
 /**
  * @author KeithYokoma
  */
@@ -11,5 +13,13 @@ public class SampleApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        Fit.initialize(this, new SampleModule(), new SampleModule());
+        Fit.getInstance().execute();
+    }
+
+    @Override
+    public void onTerminate() {
+        Fit.destroy();
+        super.onTerminate();
     }
 }
