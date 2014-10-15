@@ -57,4 +57,13 @@ import java.util.List;
             Log.e(TAG, "an error occurred while invoking the method: " + method.getName(), e);
         }
     }
+
+    public static boolean containsValueInRange(int[] values, int min, int max) {
+        for (int value : values) {
+            if (min < value && value <= max) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

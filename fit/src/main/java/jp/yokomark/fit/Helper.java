@@ -32,9 +32,9 @@ import java.util.List;
     /* package */ void execute(int baseVersion, VersionModule module, List<Method> methods) {
         for (Method method : methods) {
             OnVersion ann = method.getAnnotation(OnVersion.class);
-            int annotatedVersion = ann.value();
-            if (baseVersion < annotatedVersion &&
-                    annotatedVersion <= Utils.getCurrentVersionCode(mApplication)) {
+            int[] annotatedVersion = ann.value();
+            if (Utils.containsValueInRange(
+                    annotatedVersion, baseVersion, Utils.getCurrentVersionCode(mApplication))) {
                 Utils.dispatch(module, method);
             }
         }

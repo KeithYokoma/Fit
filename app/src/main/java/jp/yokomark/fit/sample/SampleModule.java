@@ -11,13 +11,8 @@ import jp.yokomark.fit.VersionModule;
 public class SampleModule implements VersionModule {
     public static final String TAG = SampleModule.class.getSimpleName();
 
-    @OnVersion(1)
+    @OnVersion({1, 2})
     public void onUpdate() {
-        Log.v(TAG, "1");
-    }
-
-    @OnVersion(2)
-    public void onUpdate2() {
-        Log.v(TAG, "2");
+        Log.v(TAG, "1 or 2");
     }
 }
