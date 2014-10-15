@@ -13,7 +13,7 @@ public class SampleApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        Fit.initialize(this, new SampleModule(), new SampleModule());
+        Fit.initialize(this, new SampleModule());
         Fit.getInstance().execute();
     }
 

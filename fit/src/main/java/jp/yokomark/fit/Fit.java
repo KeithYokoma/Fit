@@ -35,6 +35,9 @@ public final class Fit {
      * Synchronously executes the version up procedure.
      */
     public void execute() {
+        if (!mHistory.isVersionChanged()) {
+            return;
+        }
         mHelper.execute(mHistory.readStoredVersion(), mVersionModules);
         mHistory.storeCurrentVersion();
     }

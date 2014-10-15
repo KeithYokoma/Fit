@@ -33,7 +33,8 @@ import java.util.List;
         for (Method method : methods) {
             OnVersion ann = method.getAnnotation(OnVersion.class);
             int annotatedVersion = ann.value();
-            if (baseVersion < annotatedVersion) {
+            if (baseVersion < annotatedVersion &&
+                    annotatedVersion <= Utils.getCurrentVersionCode(mApplication)) {
                 Utils.dispatch(module, method);
             }
         }
