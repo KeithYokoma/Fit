@@ -2,6 +2,9 @@
 
 Framework for dispatching various procedure on update application.
 
+![Fit](https://farm3.staticflickr.com/2780/4285120077_2eae97a495_o_d.jpg)
+[Photo License CC by NC-ND](https://creativecommons.org/licenses/by-nc-nd/2.0/)
+
 # Attention
 
 This library is under development so API may be changed drastically until the first major release.
