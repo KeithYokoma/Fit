@@ -34,12 +34,17 @@ public final class Fit {
     /**
      * Synchronously executes the version up procedure.
      */
-    public void execute() {
+    public Result execute() {
         if (!mHistory.isVersionChanged()) {
-            return;
+            return new Result(false);
         }
-        mHelper.execute(mHistory.readStoredVersion(), mVersionModules);
-        mHistory.storeCurrentVersion();
+        try {
+            mHelper.execute(mHistory.readStoredVersion(), mVersionModules);
+            mHistory.storeCurrentVersion();
+            return new Result(true);
+        } catch (Exception e) {
+            return new Result(false, e);
+        }
     }
 
     /* package */ Application getApplication() {
