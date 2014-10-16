@@ -15,12 +15,12 @@ Prepare `VersionModule` to declare what to do when your application is updated.
 
 ```java
 public class MyModule implements VersionModule {
-    @OnVersion({1, 2, 3}) // foo() is called when the app is updated to version code = 1, 2 and 3
+    @VersionCode({1, 2, 3}) // foo() is called when the app is updated to version code = 1, 2 and 3
     public void foo() {
 
     }
 
-    @OnVersion(4) // bar() is called when the app is updated to version code = 4
+    @VersionCode(4) // bar() is called when the app is updated to version code = 4
     public void bar() {
 
     }
