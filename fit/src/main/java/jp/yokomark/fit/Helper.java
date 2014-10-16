@@ -24,14 +24,14 @@ import java.util.List;
 
     public void execute(int baseVersion, List<VersionModule> modules) {
         for (VersionModule module : modules) {
-            List<Method> methods = Utils.getAnnotatedMethods(module.getClass(), OnVersion.class);
+            List<Method> methods = Utils.getAnnotatedMethods(module.getClass(), VersionCode.class);
             execute(baseVersion, module, methods);
         }
     }
 
     /* package */ void execute(int baseVersion, VersionModule module, List<Method> methods) {
         for (Method method : methods) {
-            OnVersion ann = method.getAnnotation(OnVersion.class);
+            VersionCode ann = method.getAnnotation(VersionCode.class);
             int[] annotatedVersion = ann.value();
             if (Utils.containsValueInRange(
                     annotatedVersion, baseVersion, Utils.getCurrentVersionCode(mApplication))) {
