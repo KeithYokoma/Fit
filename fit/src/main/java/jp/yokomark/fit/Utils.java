@@ -48,6 +48,11 @@ import java.util.List;
         return methods;
     }
 
+    public static boolean hasAnnotatedMethods(Class<?> clazz, Class<? extends Annotation> ann) {
+        List<Method> methods = getAnnotatedMethods(clazz, ann);
+        return methods != null && !methods.isEmpty();
+    }
+
     public static void dispatch(VersionModule module, Method method) {
         try {
             method.invoke(module);

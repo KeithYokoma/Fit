@@ -20,6 +20,11 @@ import java.util.List;
         if (modules == null || modules.isEmpty()) {
             throw new IllegalArgumentException("No modules found.");
         }
+        for (VersionModule module : modules) {
+            if (!Utils.hasAnnotatedMethods(module.getClass(), VersionCode.class)) {
+                throw new IllegalArgumentException("No annotated method found.");
+            }
+        }
     }
 
     public void execute(int baseVersion, List<VersionModule> modules) {
