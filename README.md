@@ -1,5 +1,7 @@
 # Fit
 
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/KeithYokoma/Fit?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Framework for dispatching various procedure on update application.
 
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Fit-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/1174)
