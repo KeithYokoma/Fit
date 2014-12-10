@@ -2,6 +2,8 @@
 
 Framework for dispatching various procedure on update application.
 
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Fit-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/1174)
+
 ![Fit](https://farm3.staticflickr.com/2780/4285120077_2eae97a495_o_d.jpg)
 [Photo License CC by NC-ND](https://creativecommons.org/licenses/by-nc-nd/2.0/)
 
