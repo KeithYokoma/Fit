@@ -1,12 +1,11 @@
 # Fit
 
 [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/KeithYokoma/Fit?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Fit-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/1174)
+[![CircleCI](https://circleci.com/gh/KeithYokoma/Fit.svg?style=shield)](https://circleci.com/gh/KeithYokoma/Fit.svg?style=shield)
 
 Framework for dispatching various procedure on update application.
 
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Fit-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/1174)
-
-[![CircleCI](https://circleci.com/gh/KeithYokoma/Fit.svg?style=shield)](https://circleci.com/gh/KeithYokoma/Fit.svg?style=shield)  
 ![Fit](https://farm3.staticflickr.com/2780/4285120077_2eae97a495_o_d.jpg)
 [Photo License CC by NC-ND](https://creativecommons.org/licenses/by-nc-nd/2.0/)
 
