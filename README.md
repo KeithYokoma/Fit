@@ -1,8 +1,8 @@
 # Fit
 
-[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/KeithYokoma/Fit?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Gitter](http://img.shields.io/badge/Gitter-Join%20Chat-brightgreen.svg?style=flat)](https://gitter.im/KeithYokoma/Fit?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Fit-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/1174)
-[![License](http://img.shields.io/hexpm/l/plug.svg?style=flat)](https://github.com/KeithYokoma/Fit/blob/master/LICENSE.md)
+[![License](http://img.shields.io/badge/License-Apache%202-brightgreen.svg?style=flat)](https://github.com/KeithYokoma/Fit/blob/master/LICENSE.md)
 [![CircleCI](https://circleci.com/gh/KeithYokoma/Fit.svg?style=shield)](https://circleci.com/gh/KeithYokoma/Fit.svg?style=shield)
 
 Framework for dispatching various procedure on update application.
