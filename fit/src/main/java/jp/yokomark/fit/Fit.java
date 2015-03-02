@@ -39,12 +39,17 @@ public final class Fit {
             return new Result(false);
         }
         try {
-            mHelper.execute(mHistory.readStoredVersion(), mVersionModules);
+            Result result = execute(mHistory.readStoredVersion());
             mHistory.storeCurrentVersion();
-            return new Result(true);
+            return result;
         } catch (Exception e) {
             return new Result(false, e);
         }
+    }
+
+    public Result execute(int versionCode) {
+        mHelper.execute(versionCode, mVersionModules);
+        return new Result(true);
     }
 
     /* package */ Application getApplication() {
