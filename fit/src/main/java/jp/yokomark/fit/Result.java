@@ -4,7 +4,6 @@ package jp.yokomark.fit;
  * @author KeithYokoma
  */
 public class Result {
-    public static final String TAG = Result.class.getSimpleName();
     private final boolean mSuccess;
     private final Throwable mThrowable;
 

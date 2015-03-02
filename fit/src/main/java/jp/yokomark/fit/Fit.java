@@ -22,7 +22,7 @@ public final class Fit {
         mApplication = application;
         mHistory = new VersionHistory(application);
         mHelper = new Helper(application);
-        mVersionModules = new ArrayList<VersionModule>();
+        mVersionModules = new ArrayList<>();
     }
 
     public void addModules(VersionModule... modules) {
@@ -52,7 +52,7 @@ public final class Fit {
     }
 
     /* package */ List<VersionModule> getVersionModules() {
-        return new ArrayList<VersionModule>(mVersionModules);
+        return new ArrayList<>(mVersionModules);
     }
 
     public static void initialize(Application application, VersionModule... modules) {

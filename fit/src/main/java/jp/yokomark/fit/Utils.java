@@ -38,7 +38,7 @@ import java.util.List;
     }
 
     public static List<Method> getAnnotatedMethods(Class<?> clazz, Class<? extends Annotation> ann) {
-        List<Method> methods = new ArrayList<Method>();
+        List<Method> methods = new ArrayList<>();
         Method[] declared = clazz.getDeclaredMethods();
         for (Method method : declared) {
             if (method.isAnnotationPresent(ann)) {
