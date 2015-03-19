@@ -53,6 +53,17 @@ Fit.getInstance().execute();
 Currently `Fit` has a synchronous call interface only.
 Asynchronous call will be introduced in the near future.
 
+# ProGuard Settings
+
+Set configuration for ProGuard to keep annotation and annotated methods.
+
+```java
+-keepattributes *Annotation*
+-keepclassmembers class * {
+    @jp.yokomark.fit.VersionCode *;
+}
+```
+
 # License
 
 Apache License v2
