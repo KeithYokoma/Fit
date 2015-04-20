@@ -16,7 +16,7 @@ This library is under development so API may be changed drastically until the fi
 
 # Usage
 
-Prepare `VersionModule` to declare what to do when your application is updated.
+Prepare `VersionModule` to declare what to do when your application is upgraded or newly installed.
 
 ```java
 public class MyModule implements VersionModule {
@@ -26,6 +26,23 @@ public class MyModule implements VersionModule {
     }
 
     @VersionCode(4) // bar() is called when the app is updated to version code = 4
+    public void bar() {
+
+    }
+}
+```
+
+If you like to have them executed only when it is an upgrade, use `UpgradeOnly` annotation.
+
+```java
+public class MyModule implements VersionModule {
+    @VersionCode({1, 2, 3}) // foo() is called when the app is updated to version code = 1, 2 and 3
+    public void foo() {
+
+    }
+
+    @VersionCode(4)
+    @UpgradeOnly // bar() is called when the app is updated to version code = 4, and not called when the app is newly installed
     public void bar() {
 
     }
