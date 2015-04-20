@@ -38,6 +38,10 @@ import java.util.List;
         for (Method method : methods) {
             VersionCode ann = method.getAnnotation(VersionCode.class);
             int[] annotatedVersion = ann.value();
+            boolean reject = Utils.isNewInstall(baseVersion) && method.isAnnotationPresent(UpgradeOnly.class);
+            if (reject) {
+                continue;
+            }
             if (Utils.containsValueInRange(
                     annotatedVersion, baseVersion, Utils.getCurrentVersionCode(mApplication))) {
                 Utils.dispatch(module, method);

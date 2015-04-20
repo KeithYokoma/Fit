@@ -34,6 +34,12 @@ public class UtilsTest {
         assertEquals("foo", Utils.getAnnotatedMethods(MockVersionModule.class, VersionCode.class).get(0).getName());
     }
 
+    @Test
+    public void isNewInstall() throws Exception {
+        assertTrue(Utils.isNewInstall(VersionHistory.NEW_INSTALL_CODE));
+        assertFalse(Utils.isNewInstall(1));
+    }
+
     static class MockVersionModule implements VersionModule {
         @VersionCode(1)
         public void foo() {

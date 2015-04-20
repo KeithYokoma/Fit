@@ -71,4 +71,8 @@ import java.util.List;
         }
         return false;
     }
+
+    public static boolean isNewInstall(int baseCode) {
+        return baseCode == VersionHistory.NEW_INSTALL_CODE;
+    }
 }

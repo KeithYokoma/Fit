@@ -9,6 +9,7 @@ import android.util.Log;
  */
 /* package */ class VersionHistory {
     public static final String TAG = VersionHistory.class.getSimpleName();
+    public static final int NEW_INSTALL_CODE = 0;
     private static final String PREF_NAME = "fit_version";
     private static final String KEY_VERSION_CODE = "version_code";
     private final Application mApplication;
@@ -26,7 +27,7 @@ import android.util.Log;
 
     public int readStoredVersion() {
         SharedPreferences preferences = Utils.getDefaultSharedPreferences(mApplication, PREF_NAME);
-        return preferences.getInt(KEY_VERSION_CODE, 0);
+        return preferences.getInt(KEY_VERSION_CODE, NEW_INSTALL_CODE);
     }
 
     public boolean isVersionChanged() {
