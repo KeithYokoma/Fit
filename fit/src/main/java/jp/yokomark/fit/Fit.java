@@ -36,20 +36,21 @@ public final class Fit {
      */
     public Result execute() {
         if (!mHistory.isVersionChanged()) {
-            return new Result(false);
+            return new Result(false, 0);
         }
+        int code = mHistory.readStoredVersion();
         try {
-            Result result = execute(mHistory.readStoredVersion());
+            Result result = execute(code);
             mHistory.storeCurrentVersion();
             return result;
         } catch (Exception e) {
-            return new Result(false, e);
+            return new Result(false, code, e);
         }
     }
 
     public Result execute(int versionCode) {
         mHelper.execute(versionCode, mVersionModules);
-        return new Result(true);
+        return new Result(true, versionCode);
     }
 
     /* package */ Application getApplication() {
