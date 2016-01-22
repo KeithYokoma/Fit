@@ -3,8 +3,8 @@ package jp.yokomark.fit;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.robolectric.Robolectric;
 import org.robolectric.RobolectricTestRunner;
+import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 
 import java.util.ArrayList;
@@ -13,14 +13,14 @@ import java.util.List;
 /**
  * @author KeishinYokomaku
  */
-@Config(emulateSdk = 18)
+@Config(constants = BuildConfig.class, sdk = 21)
 @RunWith(RobolectricTestRunner.class)
 public class HelperTest {
     private Helper mHelper;
 
     @Before
     public void setUp() throws Exception {
-        mHelper = new Helper(Robolectric.application);
+        mHelper = new Helper(RuntimeEnvironment.application);
     }
 
     @Test

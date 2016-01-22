@@ -2,8 +2,8 @@ package jp.yokomark.fit;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.robolectric.Robolectric;
 import org.robolectric.RobolectricTestRunner;
+import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 
 import static org.junit.Assert.assertNotNull;
@@ -11,12 +11,12 @@ import static org.junit.Assert.assertNotNull;
 /**
  * @author KeishinYokomaku
  */
-@Config(emulateSdk = 18)
+@Config(constants = BuildConfig.class, sdk = 21)
 @RunWith(RobolectricTestRunner.class)
 public class FitTest {
     @Test
     public void initialization() throws Exception {
-        Fit.initialize(Robolectric.application, new MockModule());
+        Fit.initialize(RuntimeEnvironment.application, new MockModule());
         assertNotNull(Fit.getInstance());
     }
 

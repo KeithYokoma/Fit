@@ -12,7 +12,7 @@ import static org.junit.Assert.assertTrue;
 /**
  * @author KeishinYokomaku
  */
-@Config(emulateSdk = 18)
+@Config(constants = BuildConfig.class, sdk = 21)
 @RunWith(RobolectricTestRunner.class)
 public class UtilsTest {
     @Test
