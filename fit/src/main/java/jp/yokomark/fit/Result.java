@@ -4,9 +4,10 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 /**
- * This entity has the information about the execution result.
+ * An object representing an upgrade procedure execution result.
  * @author KeithYokoma
  */
+@SuppressWarnings("unused") // public APIs
 public class Result implements Parcelable {
     public static final Creator<Result> CREATOR = new Creator<Result>() {
         @Override
@@ -51,18 +52,30 @@ public class Result implements Parcelable {
         dest.writeInt(mFrom);
     }
 
+    /**
+     * @return true if all executions went well, false otherwise.
+     */
     public boolean isSuccess() {
         return mSuccess;
     }
 
+    /**
+     * @return true if an error occurred in the upgrade procedure.
+     */
     public boolean hasError() {
         return mThrowable != null;
     }
 
+    /**
+     * @return a throwable object that is thrown in the upgrade procedure.
+     */
     public Throwable getThrowable() {
         return mThrowable;
     }
 
+    /**
+     * @return the previous version code.
+     */
     public int getFrom() {
         return mFrom;
     }

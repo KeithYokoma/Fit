@@ -8,6 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
+ * Handles version upgrade procedure when the version code is incremented.
  * @author KeithYokoma
  */
 public final class Fit {

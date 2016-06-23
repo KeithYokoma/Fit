@@ -41,7 +41,7 @@ import java.util.List;
         List<Method> methods = new ArrayList<>();
         Method[] declared = clazz.getDeclaredMethods();
         for (Method method : declared) {
-            if (method.isAnnotationPresent(ann)) {
+            if (method.getAnnotation(ann) != null) {
                 methods.add(method);
             }
         }

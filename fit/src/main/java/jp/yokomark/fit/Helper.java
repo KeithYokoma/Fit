@@ -38,7 +38,7 @@ import java.util.List;
         for (Method method : methods) {
             VersionCode ann = method.getAnnotation(VersionCode.class);
             int[] annotatedVersion = ann.value();
-            boolean reject = Utils.isNewInstall(baseVersion) && method.isAnnotationPresent(UpgradeOnly.class);
+            boolean reject = Utils.isNewInstall(baseVersion) && method.getAnnotation(UpgradeOnly.class) != null;
             if (reject) {
                 continue;
             }
