@@ -1,20 +1,19 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion '24.0.2'
+    compileSdkVersion 28
 
     defaultConfig {
         applicationId "jp.yokomark.fit.sample"
         minSdkVersion 15
-        targetSdkVersion 24
+        targetSdkVersion 28
         versionCode 2
         versionName "1.0"
     }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile project(':fit')
-    compile 'com.android.support:appcompat-v7:24.2.1'
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    api project(':fit')
+    api 'com.android.support:appcompat-v7:28.0.0-rc01'
 }
