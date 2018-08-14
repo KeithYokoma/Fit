@@ -18,10 +18,9 @@ android {
 }
 
 dependencies {
-    api fileTree(dir: 'libs', include: ['*.jar'])
-    api 'com.android.support:support-v4:28.0.0-rc01'
-    api 'com.android.support:appcompat-v7:28.0.0-rc01'
-    api 'com.android.support:support-annotations:28.0.0-rc01'
+    implementation 'com.android.support:support-v4:28.0.0-rc01'
+    implementation 'com.android.support:appcompat-v7:28.0.0-rc01'
+    implementation 'com.android.support:support-annotations:28.0.0-rc01'
 
     // Robolectric
     testImplementation 'junit:junit:4.12'
